@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/lib/x86_64-linux-gnu/glib-2.0/include/",
+                "/usr/include/gdk-pixbuf-2.0/",
+                "/usr/include/librsvg-2.0/librsvg/",
+                "/usr/include/cairo/",
+                "/usr/include/glib-2.0/"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
