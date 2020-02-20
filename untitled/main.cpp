@@ -35,6 +35,17 @@ int main(int argc, char *argv[])
     //Flame Surface and SVG Handle
     RsvgHandle* flame_handle;
     flame_handle = rsvg_handle_new_from_file((path+".svg").c_str(),0);
+
+    RsvgDimensionData dimensions;
+    double x_factor, y_factor;
+    double scale_factor;
+    rsvg_handle_get_dimensions (flame_handle, &dimensions);
+    x_factor = (double) Width / dimensions.width;
+    y_factor = (double) Height / dimensions.height;
+    scale_factor = MIN (x_factor, y_factor);
+    cairo_scale (cr, scale_factor, scale_factor);
+
+
     rsvg_handle_render_cairo (flame_handle,cr);
 
     // Clean up
